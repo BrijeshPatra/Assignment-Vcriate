@@ -1,8 +1,6 @@
 package com.project.demo.entities;
-
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.util.Set;
 
 @Entity
