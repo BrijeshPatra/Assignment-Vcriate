@@ -28,12 +28,13 @@ public class UserServiceTests {
         user.setUsername(username);
         when(userRepository.findByUsername(username)).thenReturn(Optional.of(user));
 
-        Optional<User> userOptional = userService.findByUsername("example_username");
+        Optional<User> userOptional = userService.findByUsername(username);
         if (userOptional.isPresent()) {
             User u = userOptional.get();
             // Now you can use the 'user' object for further operations
         } else {
             // Handle the case where the user is not found
+            System.out.println("ERROR");
         }
 
     }
